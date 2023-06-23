@@ -1,9 +1,5 @@
-#include <iostream>
-#include <vector>
 #include <ctype.h>
-
 using namespace std;
-
 bool password(string s){
 	if(s.length()<8)
 		return false;
@@ -19,10 +15,4 @@ bool password(string s){
 			num = true;
 	}
 	return (cap && small && num);
-}
-
-int main() {
-
-	cout << password("Hilkajdsfla kjfsdlkasjdf6")<<endl;
-	return 0;
 }
