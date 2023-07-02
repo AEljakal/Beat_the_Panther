@@ -1,0 +1,23 @@
+def son_anagramas(palabra1, palabra2):
+    # Convertir las palabras a minúsculas y eliminar los espacios en blanco
+    palabra1 = palabra1.lower().replace(" ", "")
+    palabra2 = palabra2.lower().replace(" ", "")
+
+    # Verificar si las palabras tienen la misma longitud
+    if len(palabra1) != len(palabra2):
+        return False
+
+    # Crear diccionarios para contar las ocurrencias de cada letra en cada palabra
+    contador1 = {}
+    contador2 = {}
+
+    # Contar las ocurrencias de letras en la primera palabra
+    for letra in palabra1:
+        contador1[letra] = contador1.get(letra, 0) + 1
+
+    # Contar las ocurrencias de letras en la segunda palabra
+    for letra in palabra2:
+        contador2[letra] = contador2.get(letra, 0) + 1
+
+    # Verificar si los diccionarios de conteo son iguales
+    return contador1 == contador2
